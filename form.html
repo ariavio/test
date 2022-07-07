@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Анкета</title>
+  <link rel="shortcut icon" href="icons8-звезда-64.png" type="image/x-icon">
+
+  <style>
+    p{
+      color:#fff;
+      font: 1.1em "Fira Sans", sans-serif;
+    }
+    td{
+        border-radius: 10px;
+        padding:10px;
+    }
+  </style>
+
+</head>
+
+<body bgcolor="FAF0E6" >
+
+  <form action="anketa.html" method="POST">
+  <table align="center" border="0">
+    <tr>
+      <td bgcolor="9F8170" align="center">
+        <p>ФИО:</p>
+        <input type="name"    required placeholder="Фамилия"                               id="surname">
+        <br><br>
+        <input type="name"    required placeholder="Имя"                                   id="name">
+        <br><br>
+        <input type="name"             placeholder="Отчество"                              id="secname">
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="9F8170" align="center">
+        <p>Дата рождения:</p>
+        <input type="date"    required placeholder="Дата рождения"                         id="age">
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="9F8170" align="center">
+        <p>Контакты:<br><small>Номер телефона вида 89xxxxxxxxx:</small></p>
+        <input type="tel"     required placeholder=""       id="tel">
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="9F8170" align="center">
+        <p>Адрес проживания:</p>
+        <input type="address" required placeholder="Улица"                                 id="street">
+        <br>
+        <br>
+        <input type="address" required placeholder="Дом"                                   id="home">
+        <br>
+        <br>
+        <input type="address" required placeholder="Квартира"                              id="flat">
+
+        <p>Зарегистрированы по проживающему адресу?
+        <br>
+        <input type="radio" name="register" value="Да">Да
+        <br>
+        <input type="radio" name="register" value="Нет">Нет</p>
+        <p>Проживающие:</p>
+        <input type="number" required placeholder="Взрослых"                               id="adult">
+        <br>
+        <br>
+        <input type="number" required placeholder="Несовершеннолетних"                     id="child">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <br>
+      </td>
+    </tr>
+    <tr>
+      <td bgcolor="9F8170" align="center">
+        <input type="submit" value="Отправььь">
+      </td>
+    </tr>
+  </table>
+  </form>
+
+  <script>
+    function f(){
+    var surname  = document.getElementById("surname" ).value;
+    var name     = document.getElementById("name"    ).value;
+    var secname  = document.getElementById("secname" ).value;
+    var age      = document.getElementById("age"     ).value;
+    var tel      = document.getElementById("tel"     ).value;
+    var street   = document.getElementById("street"  ).value;
+    var home     = document.getElementById("home"    ).value;
+    var flat     = document.getElementById("flat"    ).value;
+    var register = document.getElementById("register").value;
+    var adult    = document.getElementById("adult"   ).value;
+    var child    = document.getElementById("child"   ).value;
+          
+
+    document.writeln(surname      + "<br>");
+    document.writeln(name         + "<br>");
+    document.writeln(secname      + "<br>");
+    document.writeln(age          + "<br>");
+    document.writeln(tel          + "<br>");
+    document.writeln(street       + "<br>");
+    document.writeln(home         + "<br>");
+    document.writeln(flat         + "<br>");
+    document.writeln(adult        + "<br>");
+    document.writeln(child        + "<br>");
+  }
+  </script>
+
+</body>
+</html>
